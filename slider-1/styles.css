@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 800px;
+    height: 450px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.container .slides{
+    width: 600%;
+    height: 100%;
+    display: flex;
+}
+.container .slides .slide{
+    width: 16.666%;
+    width: calc(100% / 6);
+    height: 100%;
+}
+.container img{
+    display: block;
+    max-width: 800px;
+    width: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+    transform: scale(0.85) rotate(20deg);
+    transition: filter 1s linear, transform 1s linear;
+}
+.container .i3, .container .i6{
+    transform: scale(0.7) rotate(-40deg);
+}
+input[type="radio"]{
+    position: absolute;
+    visibility: hidden;
+}
+.nav{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.nav .nvbar{
+    width: 30px;
+    height: 30px;
+    border: 2px solid;
+    margin-left: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: white;
+}
+.nav .nvbar:hover{
+    background: rgb(46, 46, 46);
+}
+#r1:checked ~ .box1{
+    margin-left: 0;
+}
+#r1:checked ~ .slide .i1{
+    filter: blur(0);
+    transform: scale(1);
+}
+#r2:checked ~ .box1{
+    margin-left: -16.666%;
+    margin-left: calc(100% / -6);
+}
+#r2:checked ~ .slide .i2{
+    filter: blur(0);
+    transform: scale(1);
+}
+#r3:checked ~ .box1{
+    margin-left: -33.333%;
+    margin-left: calc(200% / -6);
+}
+#r3:checked ~ .slide .i3{
+    filter: blur(0);
+    transform: scale(1);
+}
+#r4:checked ~ .box1{
+    margin-left: -49.9999%;
+    margin-left: calc(300% / -6);
+}
+#r4:checked ~ .slide .i4{
+    filter: blur(0);
+    transform: scale(1);
+}
+#r5:checked ~ .box1{
+    margin-left: -66.6666%;
+    margin-left: calc(400% / -6);
+}
+#r5:checked ~ .slide .i5{
+    filter: blur(0);
+    transform: scale(1);
+}
+#r6:checked ~ .box1{
+    margin-left: -83.333%;
+    margin-left: calc(500% / -6);
+}
+#r6:checked ~ .slide .i6{
+    filter: blur(0);
+    transform: scale(1);
+}
